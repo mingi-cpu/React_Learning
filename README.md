@@ -16,9 +16,9 @@
 
 ---
 ## 📂 구조
-01-course-projects : 강의 기반 프로젝트 따라 만들기
-02-practice-projects : 개념 복습 및 간단한 연습용 프로젝트
-03-upgrade-projects : 기존 프로젝트 기능 개선 및 확장
+* 01-course-projects : 강의 기반 프로젝트 따라 만들기
+* 02-practice-projects : 개념 복습 및 간단한 연습용 프로젝트
+* 03-upgrade-projects : 기존 프로젝트 기능 개선 및 확장
 
 ## 🛠 사용 기술
 
