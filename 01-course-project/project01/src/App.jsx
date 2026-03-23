@@ -6,7 +6,6 @@ function App() {
   const [count,setCount]=useState(0);
 
   const onClickButton = (value) => {
-  console.log("클립됨-APP")
   setCount(count => count + value);
 };
   return (
