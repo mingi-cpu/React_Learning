@@ -16,3 +16,11 @@ body{
     padding: 20px;
     margin-bottom: 10px;
 }
+.controller{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.controll{
+    margin-bottom: 20px;
+}

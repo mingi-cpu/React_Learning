@@ -1,5 +1,5 @@
 const Controller=({onClickButton})=>{
-    return <div>
+    return <div className="controller">
        <button onClick={()=>{
         onClickButton(-1) 
        }}>-1</button>

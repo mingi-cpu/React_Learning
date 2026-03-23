@@ -1,5 +1,5 @@
 const Controller2=({onClickButton2})=>{
-    return <div>
+    return <div className="controller">
        <button onClick={()=>{
         onClickButton2(-10000)
        }}>-10000</button> 
@@ -14,7 +14,7 @@ const Controller2=({onClickButton2})=>{
        }}>100</button>
        <button onClick={()=>{
         onClickButton2(10000)
-       }}>100000</button>
+       }}>10000</button>
     </div>
 }
 export default Controller2

@@ -22,8 +22,12 @@ function App() {
     {count%2===0? <Even/>:<Odd/>}
     </section>
     <section>
-    <Controller className="contorller" onClickButton={onClickButton}/>
-    <Controller2 className="contorller" onClickButton2={onClickButton2}/>
+      <div className='controll'>
+        <Controller  onClickButton={onClickButton}/>
+      </div>
+      <div >
+        <Controller2  onClickButton2={onClickButton2}/>
+      </div>
     </section>
     </div>
   )
