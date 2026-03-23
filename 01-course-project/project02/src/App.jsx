@@ -4,9 +4,9 @@ import Header from './components/Header'
 import List from './components/List'
 function App() {
   return (
-    <div className='app'>
+    <div className='app '>
       <Header/>
-      <Editor/>
+      <Editor/> 
       <List/>
     </div>
   )
