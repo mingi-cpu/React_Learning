@@ -1,43 +1,60 @@
 import './App.css'
-import { useReducer,useRef,createContext } from 'react'
+import { useReducer,useRef,createContext, useEffect, useState } from 'react'
 import {Routes,Route} from "react-router-dom"
 import Home from "./pages/Home"
 import Diary from "./pages/Diary"
 import New from "./pages/New"
-import Not from './pages/Not' 
+import Not from './pages/Not'    
 import Edit from './pages/Edit'
 export const DiaryStateContext=createContext()
 export const DiaryDispatchContext=createContext() 
-const mockData = [
-  {id:1,
-  createdDate:new Date("2026-04-10").getTime(),
-  emotionid:1 ,
-  content:"1번일기내용", },
-  {id:2,
-  createdDate:new Date("2026-04-11").getTime(),
-  emotionid:2 ,
-  content:"2번일기내용",},
-  {id:3,
-  createdDate:new Date("2026-03-30").getTime(),
-  emotionid:3 ,
-  content:"3번일기내용",},
-]
 function reducer(state,action){
-  switch(action.type){
+  let nextstate;
+  switch(action.type){ 
+    case "INIT":return action.data
     case "CREATE":
-      return [action.data,...state]
+      {nextstate=  [action.data,...state];
+        break;}
     case "UPDATE":
-      return state.map((item)=>item.id==action.data.id
-      ? action.data:item)
+      {nextstate= state.map((item)=>item.id==action.data.id
+      ? action.data:item);
+    break;}
     case "DELETE":
-      console.log()
-      return state.filter((item)=>item.id!=action.data.id)
+      {nextstate= state.filter((item)=>item.id!=action.data.id);
+      break;}
     default:
       return state
-    }}
+    }
+    localStorage.setItem("diary",JSON.stringify(nextstate));
+    return nextstate
+  } 
 function App() {
-  const [data,dispatch]=useReducer(reducer,mockData); 
-  const idRef = useRef(4)
+  const [isLoading,setIsLoading]=useState(true)
+  const [data,dispatch]=useReducer(reducer,[]);
+  const idRef = useRef(0);
+  useEffect(()=>{
+    const storedData=localStorage.getItem("diary")
+    if (!storedData){
+      setIsLoading(false)
+      return;
+    }
+    const parsedData=JSON.parse(storedData);
+    if (!Array.isArray(parsedData)){
+       return;
+    }
+    let maxId=0;
+    parsedData.forEach(item => {
+      if(Number(item.id)>maxId){
+        maxId=Number(item.id)
+      }
+      idRef.current=maxId+1;
+    });
+    dispatch({
+      type:"INIT",
+      data:parsedData
+    });
+    setIsLoading(false)
+  },[]) 
   const onCreate = (createdDate,emotionid,content) => {
     dispatch({
       type:"CREATE",
@@ -64,6 +81,9 @@ function App() {
       }
     })
   }  
+  if (isLoading){
+    return <div>...Loading</div>
+  }
   return (
     <>
     <DiaryStateContext.Provider value={data}>
