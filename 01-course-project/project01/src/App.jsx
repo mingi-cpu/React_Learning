@@ -1,13 +1,15 @@
 import './App.css'
 import Viewer from './components/Viewer'
 import Controller from './components/Controller'
-import { useState  } from 'react'
+import { useState, useEffect  } from 'react'
 import Even from './components/Even'
 import Odd from './components/Odd'
 import Controller2 from './components/Controller2'
 function App() {
   const [count,setCount]=useState(0);
-
+  useEffect(()=>{
+    console.log(`count:${count}`) 
+  },[count])
   const onClickButton = (value) => {
   setCount(count => count + value);
 };

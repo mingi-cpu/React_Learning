@@ -1,0 +1,22 @@
+export const  emotionList=[
+    {
+        emotionid:1,
+        emotionname:"완전좋음"
+    },
+    {
+        emotionid:2,
+        emotionname:"좋음"
+    },
+    {
+        emotionid:3,
+        emotionname:"그럭저럭"
+    },
+    {
+        emotionid:4,
+        emotionname:"나쁨"
+    },
+    {
+        emotionid:5,
+        emotionname:"끔찍함"
+    }
+]
