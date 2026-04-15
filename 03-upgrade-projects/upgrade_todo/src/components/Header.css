@@ -1,0 +1,14 @@
+.Header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Header_Date{
+    color:rgb(50, 161, 89);
+    font-size: 50px;
+    font-weight: 600;
+}
+.Header_Head{
+    color: gray;
+    font-size: 20px;
+}
