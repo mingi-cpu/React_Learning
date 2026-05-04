@@ -1,0 +1,26 @@
+.Editor{
+    display: flex;
+    gap: 5px;
+    font-weight: 600;
+}
+.Editor > input{
+    outline: none;
+    border: 2px solid rgb(219, 219, 219);
+    color:rgb(50, 161, 89);
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.Editor > input:focus{
+    border: 2px solid rgb(50, 161, 89);
+}
+.Editor > button{
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: rgb(50, 161, 89);
+    color: white;
+}

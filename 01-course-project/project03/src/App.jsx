@@ -27,7 +27,7 @@ function reducer(state,action){
     }
     localStorage.setItem("diary",JSON.stringify(nextstate));
     return nextstate
-  } 
+  }
 function App() {
   const [isLoading,setIsLoading]=useState(true)
   const [data,dispatch]=useReducer(reducer,[]);
