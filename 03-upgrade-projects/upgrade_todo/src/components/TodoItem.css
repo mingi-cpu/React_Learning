@@ -1,0 +1,16 @@
+.TodoItem{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+.TodoItem button{
+    border: none;
+    height: 50px;
+    width: 70px;
+    border-radius: 10px;
+}
+.TodoItem button:hover{
+    background-color: gray;
+    color: white;
+}

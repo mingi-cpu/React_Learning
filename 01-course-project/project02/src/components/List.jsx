@@ -13,7 +13,6 @@ const List = ({todos,onUpdate,onDelete}) => {
         }
         return todos.filter((todo)=>todo.content.toLowerCase().includes(search.toLowerCase()))
     }
-
     const filteredTodos = getFilteredDate(); 
     return <div className="List">
         <h4>Todo List 🌱</h4>
