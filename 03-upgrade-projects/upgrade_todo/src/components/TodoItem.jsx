@@ -15,15 +15,20 @@ const TodoItem = ({ editTodos, checkTodos, check, id, content, date, deleteTodos
       setIsEdit(true)
     }
   }
-
+  function onChangeEdit(e){
+    setEditText(e.target.value)
+  }
+  function onChangeCheck(){
+    checkTodos(id)
+  }
   return (
     <div className="TodoItem">
-      <input type="checkbox" checked={check} onChange={() => checkTodos(id)} />
+      <input type="checkbox" checked={check} onChange={onChangeCheck} />
 
       {isEdit ? (
         <input
           value={editText}
-          onChange={(e) => setEditText(e.target.value)}
+          onChange={onChangeEdit}
         />
       ) : (
         <p>{content}</p>
