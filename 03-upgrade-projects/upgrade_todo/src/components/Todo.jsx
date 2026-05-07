@@ -18,7 +18,6 @@ const Todo = ({editTodos,deleteAllTodos,checkTodos,todos,deleteTodos}) => {
                     <TodoItem editTodos={editTodos} key={idx} id={todo.id} checkTodos={checkTodos} check={todo.check} content={todo.text} date={todo.date} deleteTodos={deleteTodos}/>
                 ))}
             </div>
-            <hr/>
             <div className="checkedTodo_wrap">
                 {todos.filter(todo=>(String(todo.text).includes(research)) && (todo.check))
                 .map((todo, idx) => (
