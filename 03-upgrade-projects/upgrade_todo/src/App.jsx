@@ -2,23 +2,19 @@ import './App.css'
 import Header from './components/Header'
 import Editor from './components/Editor'
 import Todo from './components/Todo'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 function App() {
   const TODO='todokey'
-  const [todos,setTodos]=useState([
-    { id:new Date().getTime(),
-      text:"그거아세용",
-      date:new Date().toLocaleDateString(),
-      check:false
-    }
-  ]);
+  const savedToDos = localStorage.getItem(TODO);
+  const parsedToDos = saveTodos?JSON.parse(savedToDos):[];
+  const [todos,setTodos]=useState(parsedToDos);
+
+  useEffect(saveTodos,[todos])
   function saveTodos(){
     localStorage.setItem(TODO,JSON.stringify(todos));
   }
   function createTodos(value){
     setTodos([...todos,value]);
-    
-
   }
   function deleteTodos(value){
     setTodos([...todos].filter(todo =>todo.id!==value));
@@ -35,12 +31,6 @@ function App() {
     setTodos([...todos].map(todo=>
       todo.id==value?{...todo,text:edit}:{...todo}))
     }
-    const savedToDos = localStorage.getItem(TODO);
-    if(savedToDos !== null){
-        const parsedToDos = JSON.parse(savedToDos);
-        setTodos(parsedToDos)
-    }
-  const savedTodos=localStorage.getItem(TODO)
   return (
     <div className='App'>
     <Header/>
