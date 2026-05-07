@@ -4,6 +4,19 @@
     width: 100%;
     border-bottom: 1px solid gray;
 }
+#checkBox{
+    accent-color: rgb(50, 161, 89);
+}
+p{
+    border: 1px solid white;
+}
+#editInput{
+    outline: none;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
 .TodoItem button{
     border: none;
     height: 50px;

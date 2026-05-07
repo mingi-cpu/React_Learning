@@ -23,10 +23,11 @@ const TodoItem = ({ editTodos, checkTodos, check, id, content, date, deleteTodos
   }
   return (
     <div className="TodoItem">
-      <input type="checkbox" checked={check} onChange={onChangeCheck} />
+      <input id="checkBox" type="checkbox" checked={check} onChange={onChangeCheck} />
 
       {isEdit ? (
         <input
+          id="editInput"
           value={editText}
           onChange={onChangeEdit}
         />
