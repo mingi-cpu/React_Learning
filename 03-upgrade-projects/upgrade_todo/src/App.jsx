@@ -5,8 +5,8 @@ import Todo from './components/Todo'
 import { useEffect, useState } from 'react'
 function App() {
   const TODO='todokey'
-  const savedToDos = localStorage.getItem(TODO);
-  const parsedToDos = saveTodos?JSON.parse(savedToDos):[];
+  const savedTodos = localStorage.getItem(TODO);
+  const parsedToDos = savedTodos ? JSON.parse(savedTodos):[];
   const [todos,setTodos]=useState(parsedToDos);
 
   useEffect(saveTodos,[todos])
