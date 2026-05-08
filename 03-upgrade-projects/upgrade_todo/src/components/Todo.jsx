@@ -12,12 +12,14 @@ const Todo = ({editTodos,deleteAllTodos,checkTodos,todos,deleteTodos}) => {
                 <input type="text" onChange={onChangeResearch} value={research} placeholder="검색"/>
                 <button onClick={deleteAllTodos}>전체삭제</button>
             </div>
+            <p>not checked</p>
             <div className="uncheckedTodo_wrap">
                 {todos.filter(todo=>(String(todo.text).includes(research)) && !(todo.check))
                 .map((todo, idx) => (
                     <TodoItem editTodos={editTodos} key={idx} id={todo.id} checkTodos={checkTodos} check={todo.check} content={todo.text} date={todo.date} deleteTodos={deleteTodos}/>
                 ))}
             </div>
+            <p>checked</p>
             <div className="checkedTodo_wrap">
                 {todos.filter(todo=>(String(todo.text).includes(research)) && (todo.check))
                 .map((todo, idx) => (
