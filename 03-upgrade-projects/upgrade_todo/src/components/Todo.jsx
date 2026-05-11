@@ -24,9 +24,9 @@ const Todo = ({editTodos,deleteAllTodos,checkTodos,todos,deleteTodos}) => {
                 {todos.filter(todo=>(String(todo.text).includes(research)) && (todo.check))
                 .map((todo, idx) => (
                     <TodoItem editTodos={editTodos} key={idx} id={todo.id} checkTodos={checkTodos} check={todo.check} content={todo.text} date={todo.date} deleteTodos={deleteTodos}/>
-                ))}
+                ))} 
             </div>
-        </div>
+        </div> 
     )
 }
 export default Todo
