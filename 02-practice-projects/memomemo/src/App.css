@@ -1,0 +1,28 @@
+.App{
+  background-size: cover;
+  min-height: 100vh;
+}
+.background_0{
+  background-image: url(../public/0.jpg);
+}
+.background_1{
+  background-image: url(../public/1.jpg);
+}
+.background_2{
+  background-image: url(../public/2.jpg);
+}
+.background_3{
+  background-image: url(../public/3.jpg);
+}
+.background_4{
+  background-image: url(../public/4.jpg);
+}
+.background_5{
+  background-image: url(../public/5.jpg);
+}
+.background_6{
+  background-image: url(../public/6.jpg);
+}
+.background_7{
+  background-image: url(../public/7.jpg);
+}
