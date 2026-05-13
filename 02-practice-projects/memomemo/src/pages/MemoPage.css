@@ -19,6 +19,42 @@
     font-size: 40px;
     padding: 20px 0;
 }
+.MemoPage_box input{
+    margin-top: 20px;
+    width: 90%;
+    height: 70px;
+    font-size: 40px;
+    border: none;
+    border-bottom: 2px solid gray;
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.MemoPage_box input:focus{
+    padding: 5px;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+}
+.MemoPage_box p{
+    padding:20px 80px;
+    word-break: break-all;
+}
+.MemoPage_box textarea{
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0);
+    width: 90%;
+    height: 400px;
+    font-size: 30px;
+    resize: vertical;
+    outline: none;
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px solid rgb(215, 215, 215);
+}
+.MemoPage_box textarea:focus{
+    border: 2px solid black;
+}
 .MemoPage button{
     width: 80%;
     height: 80px;
@@ -37,4 +73,10 @@
 }
 .del_button:hover{
     background-color: rgba(178, 47, 47,0.97);
+}
+.save_button{
+    background-color: rgba(0, 255, 255, 0.97);
+}
+.save_button:hover{
+    background-color: rgba(0, 210, 210, 0.97);
 }

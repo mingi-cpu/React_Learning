@@ -1,13 +1,19 @@
 .Memo{
-    margin: 100px;
+    margin: 50px;
     background-color: white;
+    padding: 15px;
     width: 300px;
-    height: 300px;
-    font-size: 30px;
+    min-height: 300px;
+    height: 100%;
+    font-size: 20px;
     border-radius: 10px;
     text-align: center;
 }
 .Memo h5{
     font-size: 40px;
     padding: 20px 0;
+}
+.Memo p{
+    text-wrap:unset;
+    word-break: break-all;
 }

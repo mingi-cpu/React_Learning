@@ -6,10 +6,10 @@ const Editor = ({createMemos}) =>{
     const [text,setText] = useState("");
     const navi = useNavigate()
     function onClickButton(){
-        if(title===""&&text===""){
+        if(title===""||text===""){
+            alert("내용을 모두 채워주세요")
             return
         }
-        
         createMemos(
             {
                 title:title,
@@ -28,7 +28,8 @@ const Editor = ({createMemos}) =>{
     }
     return(
         <div className="Editor">
-                <input value={title} onChange={onChangeTitle} type="text" placeholder="제목"/>
+                <input value={title} maxLength={32} onChange={onChangeTitle} type="text" placeholder="제목"/>
+                <p>{new Date().toLocaleDateString()}</p>
                 <textarea value={text} onChange={onChangeText} placeholder="오늘은 어떤일이 있었나요?"></textarea>
                 <button onClick={onClickButton}>저장</button>
         </div>

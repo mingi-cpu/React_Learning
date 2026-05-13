@@ -10,9 +10,11 @@
 }
 .Editor input{
     margin-top: 20px;
-    width: 300px;
+    width: 90%;
     height: 70px;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: bold;
+
     border: none;
     border-bottom: 2px solid gray;
     text-align: center;
@@ -23,12 +25,17 @@
     box-sizing: border-box;
     border-bottom: 2px solid black;
 }
+.Editor p{
+    font-size: 30px;
+}
 .Editor textarea{
     box-sizing: border-box;
-    width: 300px;
+    width: 90%;
+    height: 400px;
     resize: vertical;
     outline: none;
-    padding: 5px;
+    padding: 15px;
+    font-size: 30px;
     border-radius: 3px;
     border: 2px solid rgb(215, 215, 215);
 }
@@ -36,14 +43,14 @@
     border: 2px solid black;
 }
 .Editor button{
-    border: 5px;
-    border-radius: 5px;
-    width: 300px;
-    padding: 5px;
-    height: 60px;
+    width: 90%;
+    height: 80px;
     font-size: 20px;
+    font-weight: bold;
     border: none;
+    border-radius: 5px;
+    background-color: yellow;
 }
 .Editor button:hover{
-    background-color: rgb(193, 193, 193);
+    background-color: rgb(231, 231, 0);
 }
