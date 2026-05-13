@@ -1,9 +1,11 @@
 import "./Header.css"
+import { useState } from "react";
 const Header = () => {
+    const date = new Date().toLocaleDateString();
     return(
         <div className="Header">
-            <h1>mingi memo</h1>
-            <p>오늘은 어떤일이 있었나요?</p>
+            <h1>MINGI MEMO</h1>
+            <h3>to day is {date}</h3>
         </div>
     )
 }

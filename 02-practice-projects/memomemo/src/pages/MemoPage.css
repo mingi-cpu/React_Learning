@@ -1,0 +1,25 @@
+.MemoPage{
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+}
+.MemoPage_box{
+    background-color: white;
+    width: 80%;
+    height: 700px;
+    font-size: 30px;
+    margin: 0 auto;
+}
+.MemoPage_box h5{
+    font-size: 40px;
+    padding: 20px 0;
+}
+.MemoPage button{
+    width: 80%;
+    height: 80px;
+    font-size: 20px;
+    border: none;
+}
+.MemoPage button:hover{
+    background-color: rgb(189, 189, 189);
+}

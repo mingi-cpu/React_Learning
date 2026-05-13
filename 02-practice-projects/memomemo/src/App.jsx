@@ -1,31 +1,22 @@
 import {useState } from 'react'
 import './App.css'
-import Header from './components/Header'
-import Editor from './components/Editor'
-import Memo from './components/Memo'
+import { Routes, Route } from "react-router-dom";
+import EditorPage from "./pages/EditorPage"
+import Home from './pages/Home'
+import MemoPage from './pages/MemoPage'
 function App() {
-  const [num]=useState(()=>Math.floor(Math.random()*8))
   const [memoes,setMemoes]=useState([{
     title:'오늘',
     date:new Date().toLocaleDateString(),
     id:new Date().getTime(),
     text:'슬프다.'
   }])
-  function createMemo(){
-    
-  }
-  function deleteMemo(){
-
-  }
-  function updateMemo(){
-
-  }
   return (
-    <div className={`App background_${num}`}>
-      <Header/>
-      <Editor/>
-      <Memo/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/Editor" element={<EditorPage/>} />
+      <Route path="/Memo" element={<MemoPage/>} />
+    </Routes>
   )
 }
 
