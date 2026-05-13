@@ -1,15 +1,16 @@
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react';
 import './Memo.css'
-const Memo = () => {
-    const navi = useNavigate()
+const Memo = ({id,title,text,date}) => {
+    const navi = useNavigate();
     function onClickButton(){
-        navi("/Memo")
+        navi(`/Memo/${id}`);
     }
     return(
         <div className='Memo' onClick={onClickButton}>
-            <h5>메모제목</h5>
-            <p>{new Date().toLocaleDateString()}</p>
-            <p>메모 내용</p>
+            <h5>{title}</h5>
+            <p>{date}</p>
+            <p>{text}</p>
         </div>
     )
 }

@@ -1,21 +1,33 @@
-import {useState } from 'react'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import EditorPage from "./pages/EditorPage"
 import Home from './pages/Home'
 import MemoPage from './pages/MemoPage'
+import { useEffect, useState } from 'react';
 function App() {
-  const [memoes,setMemoes]=useState([{
+  const savedmemoes=localStorage.getItem("Memo")
+  const parsedmemoes=savedmemoes? JSON.parse(savedmemoes):[{
     title:'오늘',
     date:new Date().toLocaleDateString(),
     id:new Date().getTime(),
     text:'슬프다.'
-  }])
+  }];
+  const [memoes,setMemoes]=useState(parsedmemoes)
+  useEffect(saveMemoes,[memoes])
+  function saveMemoes(){
+    localStorage.setItem("Memo",JSON.stringify(memoes))
+  }
+  function createMemos(newmemo){
+      setMemoes([...memoes,newmemo]);
+  }
+  function deleteMemos(delmemo){
+      setMemoes(memoes.filter((a)=>a.id!==delmemo.id));
+  }
   return (
     <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/Editor" element={<EditorPage/>} />
-      <Route path="/Memo" element={<MemoPage/>} />
+      <Route path="/" element={<Home memoes={memoes}/>} />
+      <Route path="/Editor" element={<EditorPage createMemos={createMemos}/>} />
+      <Route path="/Memo/:id" element={<MemoPage memoes={memoes} deleteMemos={deleteMemos}/>} />
     </Routes>
   )
 }

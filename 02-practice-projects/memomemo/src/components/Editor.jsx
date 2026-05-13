@@ -1,15 +1,35 @@
-const Editor = () =>{
+import { useState } from "react"
+import "./Editor.css"
+import { useNavigate } from "react-router-dom";
+const Editor = ({createMemos}) =>{
+    const [title,setTitle] = useState("");
+    const [text,setText] = useState("");
+    const navi = useNavigate()
     function onClickButton(){
-        
+        if(title===""&&text===""){
+            return
+        }
+        createMemos(
+            {
+                title:title,
+                date:new Date().toLocaleDateString(),
+                id:new Date().getTime(),
+                text:text
+            }
+        )
+        navi("/")
+    }
+    function onChangeTitle(e){
+        setTitle(e.target.value);
+    }
+    function onChangeText(e){
+        setText(e.target.value);
     }
     return(
-        <div>
-            <div>editor</div>
-            <form action="">
-                <input required type="text" placeholder="제목"/>
-                <textarea required placeholder="오늘은 어떤일이 있었나요?"></textarea>
+        <div className="Editor">
+                <input value={title} onChange={onChangeTitle} type="text" placeholder="제목"/>
+                <textarea value={text} onChange={onChangeText} placeholder="오늘은 어떤일이 있었나요?"></textarea>
                 <button onClick={onClickButton}>저장</button>
-            </form>
         </div>
     )
 }

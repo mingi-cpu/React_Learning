@@ -1,6 +1,11 @@
-.Home,.Editor{
+.Home{
     background-size: cover;
     min-height: 100vh;
+}
+.Home_memo{
+    display: flex;
+    flex-wrap: wrap;
+
 }
 .background_0{
     background-image: url(/public/0.jpg);
