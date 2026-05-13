@@ -28,10 +28,10 @@ const Editor = ({createMemos}) =>{
     }
     return(
         <div className="Editor">
-                <input value={title} maxLength={32} onChange={onChangeTitle} type="text" placeholder="제목"/>
+                <input value={title} maxLength={32} onChange={onChangeTitle} type="text" placeholder="title"/>
                 <p>{new Date().toLocaleDateString()}</p>
                 <textarea value={text} onChange={onChangeText} placeholder="오늘은 어떤일이 있었나요?"></textarea>
-                <button onClick={onClickButton}>저장</button>
+                <button onClick={onClickButton}>load</button>
         </div>
     )
 }

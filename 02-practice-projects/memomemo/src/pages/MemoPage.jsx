@@ -46,9 +46,9 @@ export default function MemoPage({memoes,deleteMemos,fixMemoes}){
                 :<p>{memo[0].text}</p>}
             </div>
             {editState?
-            <button className="save_button" onClick={onClickSaveButton}>저장</button>
-            :<button className="edit_button" onClick={onClickEditButton}>수정</button>}
-            <button className="del_button" onClick={onClickDeleteButton}>삭제</button>
+            <button className="save_button" onClick={onClickSaveButton}>save</button>
+            :<button className="edit_button" onClick={onClickEditButton}>edit</button>}
+            <button className="del_button" onClick={onClickDeleteButton}>delete</button>
         </div>
     )
 }

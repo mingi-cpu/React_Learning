@@ -3,13 +3,14 @@
     text-align: center;
 }
 .EditButton{
-    width: 100px;
+    width: 90%;
     height: 50px;
     font-size: 40px;
     border: none;
     border-radius: 5px;
-    font-weight: bold; 
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 500; 
 }
 .EditButton:hover{
-    background-color:rgb(205, 205, 205) ;
+    background-color:rgba(231, 231, 231,0.8) ;
 }
