@@ -5,7 +5,8 @@ import Home from './pages/Home'
 import MemoPage from './pages/MemoPage'
 import { useEffect, useState } from 'react';
 function App() {
-  const savedmemoes=localStorage.getItem("Memo")
+  const memoKey = "Memo"
+  const savedmemoes=localStorage.getItem(memoKey)
   const parsedmemoes=savedmemoes? JSON.parse(savedmemoes):[{
     title:'오늘',
     date:new Date().toLocaleDateString(),
@@ -15,7 +16,7 @@ function App() {
   const [memoes,setMemoes]=useState(parsedmemoes)
   useEffect(saveMemoes,[memoes])
   function saveMemoes(){
-    localStorage.setItem("Memo",JSON.stringify(memoes))
+    localStorage.setItem(memoKey,JSON.stringify(memoes))
   }
   function createMemos(newmemo){
       setMemoes([...memoes,newmemo]);
