@@ -22,11 +22,14 @@ function App() {
       setMemoes([...memoes,newmemo]);
   }
   function deleteMemos(delmemo){
-      setMemoes(memoes.filter((a)=>a.id!==delmemo.id));
+      setMemoes([...memoes].filter((a)=>a.id!==delmemo.id));
+  }
+  function fixMemoes(fixid,fixTitle,fixText){
+    setMemoes([...memoes])
   }
   return (
     <Routes>
-      <Route path="/" element={<Home memoes={memoes}/>} />
+      <Route path="/" element={<Home memoes={memoes}/>}/>
       <Route path="/Editor" element={<EditorPage createMemos={createMemos}/>} />
       <Route path="/Memo/:id" element={<MemoPage memoes={memoes} deleteMemos={deleteMemos}/>} />
     </Routes>

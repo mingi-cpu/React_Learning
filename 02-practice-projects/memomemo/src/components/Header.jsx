@@ -5,7 +5,7 @@ const Header = () => {
     return(
         <div className="Header">
             <h1>MINGI MEMO</h1>
-            <h3>to day is {date}</h3>
+            <h3>today is {date}</h3>
         </div>
     )
 }

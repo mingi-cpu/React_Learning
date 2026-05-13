@@ -9,6 +9,7 @@ const Editor = ({createMemos}) =>{
         if(title===""&&text===""){
             return
         }
+        
         createMemos(
             {
                 title:title,

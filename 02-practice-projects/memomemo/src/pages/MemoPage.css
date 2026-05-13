@@ -1,14 +1,19 @@
 .MemoPage{
     background-size: cover;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    gap: 10px;
 }
 .MemoPage_box{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.935);
     width: 80%;
     height: 700px;
     font-size: 30px;
     margin: 0 auto;
+    border-radius:5px ;
 }
 .MemoPage_box h5{
     font-size: 40px;
@@ -19,7 +24,17 @@
     height: 80px;
     font-size: 20px;
     border: none;
+    border-radius: 5px;
 }
-.MemoPage button:hover{
-    background-color: rgb(189, 189, 189);
+.edit_button{
+    background-color: rgba(172, 255, 47, 0.97);
+}
+.edit_button:hover{
+    background-color: rgba(128, 190, 34,0.97);
+}
+.del_button{
+    background-color: rgba(255, 72, 72,0.97);
+}
+.del_button:hover{
+    background-color: rgba(178, 47, 47,0.97);
 }
