@@ -6,7 +6,7 @@ const Home = ()=>{
             <SideBar color={"1"}/>
             <div className="HomeRight">
                 <div className="HomeHead">
-                    <h5>친구</h5>
+                    <h1>친구</h1>
                     <i class="fi fi-rr-search"></i>
                     <i class="fi fi-rr-user-add"></i>
                 </div>

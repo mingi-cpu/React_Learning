@@ -1,0 +1,45 @@
+.ChatBox{
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    padding: 10px;
+}
+.ChatBox:hover{
+    background-color: rgb(221, 221, 221);
+}
+.ChatBox img{
+    width: 70px;
+    border-radius: 40%;
+}
+.ChatBoxText{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: auto;
+}
+.ChatBoxText h5{
+    font-size: 15px;
+}
+.ChatBoxText p{
+    color: gray;
+}
+.ChatBoxInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 30px;
+}
+.ChatBoxInfoDate{
+    color: gray;
+    font-size: 15px;
+}
+.ChatBoxInfoNum{
+    background-color: rgb(255, 68, 0);
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    width: 25px;
+    padding: 3px;
+    color: white;
+}
