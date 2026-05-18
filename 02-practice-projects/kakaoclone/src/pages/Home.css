@@ -1,7 +1,57 @@
 .Home{
     display: flex;
 }
-.Home>div>.PFP{
-    width: 50px;
+.HomeRight{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+.HomeHead{
+    padding-top: 50px;
+    display: flex;
+    font-size: 30px;
+}
+.HomeHead>h5{
+    font-size: 35px;
+    margin-left: 30px;
+    margin-right: auto;
+}
+.HomeHead>i{
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    padding: 20px 25px;
+}
+.HomeHead>i:hover{
+    background-color: rgb(219, 219, 219);
+}
+.HomeMy{
+    display: flex;
+    margin: 0 30px;
+    padding-bottom: 20px;
+    gap: 30px;
+    border-bottom: 1.5px solid rgb(216, 216, 216);
+}
+.HomeMy_text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.HomeMy_text h5{
+    font-size: 20px;
+}
+.HomeMy_text p{
+    font-size: 15px;
+    color: gray;
+}
+.HomeMy .PFP{
+    width: 70px;
     border-radius: 40%;
+}
+.HomeFriend{
+    margin-left: 30px;
+}
+.HomeFriend p{
+    font-size: 20px;
+    color: gray;
 }

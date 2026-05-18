@@ -1,9 +1,9 @@
 import SideBar from "../components/SideBar"
-const Chat = ()=>{
+const Others = () =>{
     return(
         <div>
-            <SideBar color={2}/>
+            <SideBar color={3}/>
         </div>
     )
 }
-export default Chat
+export default Others
